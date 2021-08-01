@@ -1,7 +1,30 @@
-Hello!
+= Hello! =
+Welcome to my github page!
+
+Not quite sure what is going to be here, but I thought I'd set up something for funsies. Perhaps having a place to put stuff would motivate me to create stuff, who knows. 
+
 
 I'm trying out some things with [[https://vimwiki.github.io/|vimwiki]] and [[https://pages.github.com/|github pages]], let's see if it works.
 
-Here is a link to a short wiki page [[About me|about me]].
+Test: Here is a link to a short wiki page [[pages/About me|about me]].
 
-More things to come(?).
+
+In the meantime, here's a test image made in graphviz:
+
+{{local:../images/sample.svg|Fancy, eh?}}
+
+I don't know what it is, but there's just something comfy about graphviz. Except for `Warning: flat edge between adjacent nodes one of which has a record shape`. It scares me.
+
+Most things on this page will be available in this repo's [[https://github.com/fonfalleh/fonfalleh.github.io|source]], or have links to other sources.
+
+I might write some entries in the [[diary/diary|Diary]] (like [[diary/2021-08-01|today!]]), and I might do some wiki-based writing about what's on my mind, what I'm working on, or perhaps just things that amuses or intrigues me. We'll see.
+
+Perhaps I might mention some of the sheet music I've been transcribing, on my [[https://github.com/fonfalleh/scores|scores repo]]. (Mostly male choir so far, since that's what I've been singing the most.)
+
+I've also had a running gag for a while that I have a long term plan for a cool music project that mostly involves describing vague cool ideas and hoping for someone else with more time and skill to actually create it. We'll see how that works out, but actually trying to present my vague ideas in writing may make them less vague. Maybe.
+
+One vague idea is something like: "You know [[https://llvm.org/|LLVM]]? How about that, but for music!? Cool, right?!".
+
+Any takers? :P
+
+More things to come(?)

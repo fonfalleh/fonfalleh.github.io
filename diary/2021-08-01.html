@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="../style.css">
+<title>2021-08-01</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div id="First diary entry"><h1 id="First diary entry" class="header"><a href="#First diary entry">First diary entry</a></h1></div>
+
+<p>
+So today I've set up some basics to quite easily manage my github page through vimwiki.
+</p>
+
+<div id="First diary entry-Some things I've did/learned today"><h2 id="Some things I've did/learned today" class="header"><a href="#First diary entry-Some things I've did/learned today">Some things I've did/learned today</a></h2></div>
+<div id="First diary entry-Some things I've did/learned today-Setting up a secondary vimwiki index (this one)"><h3 id="Setting up a secondary vimwiki index (this one)" class="header"><a href="#First diary entry-Some things I've did/learned today-Setting up a secondary vimwiki index (this one)">Setting up a secondary vimwiki index (this one)</a></h3></div>
+<p>
+Simple fix, added the following line in my <code>.vimrc</code>:
+</p>
+
+<p>
+<code>let g:vimwiki_list = [{'path': '~/vimwiki/', 'path_html': '~/vimwiki_html/'}, {'path': '~/workspace/fonfalleh.github.io/wiki/', 'path_html':  '~/workspace/fonfalleh.github.io/'}]</code>
+</p>
+
+<p>
+So it's like a list of indices of vimwiki, the first one being the default install that I use for other notekeeping.
+</p>
+
+<p>
+<code>path</code> being the actual location of the <code>.wiki</code> files that I write in, and <code>path_html</code> being where the resulting HTML files are generated.
+</p>
+
+<p>
+With this setup, I can enter my second vimwiki index (this one), write a new page, run <code>:Vimwiki2AllHTML</code>, and the changes will be visible at <a href="https://fonfalleh.github.io">https://fonfalleh.github.io</a> when the changes are pushed.
+</p>
+
+<div id="First diary entry-Some light bash scripting"><h2 id="Some light bash scripting" class="header"><a href="#First diary entry-Some light bash scripting">Some light bash scripting</a></h2></div>
+<p>
+Not that it was entirely necessary, but I also created a bash script for generating the html-files from "outside" of vim (it still launches vim, but you don't need to be IN vim when running it). I'm probably always going to generate the files from within vim anyway.
+</p>
+
+<p>
+I also created a script for generating and placing all graphviz graphs (under <code>src/graphviz</code>) in the repo as .svg files in the <code>images/</code> dir, so that I can access them from <code>../images</code>, like this: <code>{{local:../../images/sample.svg}}</code>
+</p>
+
+<p>
+<span id="First diary entry-Some light bash scripting-EDIT"></span><strong id="EDIT">EDIT</strong>: So, apparently, even though it <em>Worked on my machine™</em> the relative paths don't translate the way I hoped in this manner. Perhaps I'll just generate the images where they are to be used... We'll see.
+</p>
+
+<p>
+<span id="First diary entry-Some light bash scripting-EDIT2"></span><strong id="EDIT2">EDIT2</strong>: <code>local:</code> works fine, I was using <code>file:</code>.
+</p>
+
+<p>
+Which will result in the following:
+</p>
+
+<p>
+<img src="../images/sample.svg" />
+</p>
+
+<p>
+Wow, technology.
+</p>
+
+<p>
+Perhaps there's a way for pointing to files without having a relative path going up x steps first (two here, since this file is in <code>wiki/diary</code>).
+</p>
+
+
+<p>
+I also learned a little about Shell Parameter Expansion <a href="https://stackoverflow.com/questions/125281/how-do-i-remove-the-file-suffix-and-path-portion-from-a-path-string-in-bash">1</a>, <a href="https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html#Shell-Parameter-Expansion">2</a> in order to strip part of the path and file extension of the .gv files.
+<hr />
+</p>
+
+<p>
+So basically, if it weren't for the fact that the html files and images need to be on this repo in order to be viewed as a github page, they could be generated from the two scripts <code>generate_html.sh</code> and <code>generate_images.sh</code> in this repo's root, and the resulting pages wouldn't need to be kept in the repo. Potentially, for another page that don't need the html committed, one could just keep the wiki files and source for the images and generate things when "deploying".
+</p>
+
+<p>
+...
+</p>
+
+<p>
+So, uh, that's fun!
+</p>
+
+</body>
+</html>

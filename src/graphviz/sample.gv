@@ -1,0 +1,1 @@
+digraph G {label="This is an sample image made with graphviz (dot)."labelloc=ta [label="This is a node"]b [label="This is another node"]c [label="This node points to the second node."]b -> c [dir=back] [label="   pointy"]}
