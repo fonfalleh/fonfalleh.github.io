@@ -1,0 +1,7 @@
+Hello!
+
+I'm trying out some things with [[https://vimwiki.github.io/|vimwiki]] and [[https://pages.github.com/|github pages]], let's see if it works.
+
+Here is a link to a short wiki page [[About me|about me]].
+
+More things to come(?).
